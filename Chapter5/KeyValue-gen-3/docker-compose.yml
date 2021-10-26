@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  kvs:
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - db
+    environment:
+      - DB_NAME=kvs
+      - DB_HOST=db
+      - DB_USER=test
+      - DB_PASSWORD=kvstest
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=kvstest
+      - POSTGRES_USER=test
+      - POSTGRES_DB=kvs

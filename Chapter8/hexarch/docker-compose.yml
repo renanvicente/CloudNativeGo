@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  kvs:
+    build: .
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    links:
+      - db
+    environment:
+      - TLOG_DB_DATABASE=kvs
+      - TLOG_DB_HOST=db
+      - TLOG_DB_USERNAME=test
+      - TLOG_DB_PASSWORD=kvstest
+      - TLOG_FILENAME=transaction.log
+      - TLOG_TYPE=postgres
+      - FRONTEND_TYPE=grpc
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=kvstest
+      - POSTGRES_USER=test
+      - POSTGRES_DB=kvs
