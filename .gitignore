@@ -11,6 +11,10 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+**/*.pem
+
 # Dependency directories (remove the comment below to include it)
 # vendor/
-**/*.pem
+
+Chapter5/KeyValue-gen-3/cert.pem
+Chapter5/KeyValue-gen-3/key.pem
