@@ -11,7 +11,7 @@ import (
 
 func main() {
 	if len(os.Args) != 2 {
-		fmt.Println("usage: run main/main.go animal")
+		fmt.Println("usage: run main/encode-json.go animal")
 		os.Exit(1)
 	}
 	// Get the animal name, and build the path where we expect to

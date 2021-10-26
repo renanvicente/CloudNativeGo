@@ -13,7 +13,7 @@ type Sayer interface {
 
 func main() {
 	if len(os.Args) != 2 {
-		log.Fatal("usage: run main/main.go animal")
+		log.Fatal("usage: run main/encode-json.go animal")
 	}
 	// Get the animal name, and build the path where we expect to
 	// find the corresponding shared object (.so) file.
