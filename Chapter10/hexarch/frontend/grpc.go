@@ -2,7 +2,7 @@ package frontend
 
 import (
 	"context"
-	pb "github.com/renanvicente/CloudNativeGo/Chapter10/grpc/keyvalue"
+	pb "github.com/renanvicente/CloudNativeGo/Chapter10/grpc"
 	"github.com/renanvicente/CloudNativeGo/Chapter10/hexarch/core"
 	"google.golang.org/grpc"
 	"log"
